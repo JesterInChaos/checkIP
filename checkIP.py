@@ -20,8 +20,6 @@ def getIP(ip_url_check):
 def checkIP(wan_range):
     if getIP(ip_url_check).startswith(wan_range):
         return True
-    else:
-        return False
 
 while True:
     if not checkIP(wan_range):
