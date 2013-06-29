@@ -25,7 +25,7 @@ def checkIP(wan_range):
 
 while True:
     if not checkIP(wan_range):
-        tkMessageBox.showerror("IP Error", "The starting range " + wan_range + " doesn't match the external IP: " + getIP(ip_url_check) + "\nShutting down " + shutdown_program)
         os.system("taskkill /im " + shutdown_program + " /f")
+        tkMessageBox.showerror("IP Error", "The starting range " + wan_range + " doesn't match the external IP: " + getIP(ip_url_check) + "\nShutting down " + shutdown_program)
         break
     time.sleep(60)
